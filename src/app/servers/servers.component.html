@@ -1,1 +1,24 @@
-<p>servers works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let server of servers$ |async as servers" class="col-sm d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="" alt="Map image">
+                <div class="card-body">
+                    <h3 class="card-title">{{server._id}}</h3>
+                    <p class="card-text">Current map : {{server.currentMap}}</p>
+                    <p class="card-text">Coming next : {{server.nextMap}}</p>
+                    <div  class="playersList">
+                        <h5>Players</h5>
+                        <ng-container *ngFor="let player of server.players">
+                            <span>{{player.name}}</span>
+                        </ng-container>
+                    </div>
+                    <h5>Maps on the server</h5>
+                    <ng-container *ngFor="let map of server.map">
+                        {{map}}
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

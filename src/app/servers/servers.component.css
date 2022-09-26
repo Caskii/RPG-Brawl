@@ -1,0 +1,5 @@
+.playersList{
+    display: none;
+}.playersList:has(span){
+    display: initial;
+}
