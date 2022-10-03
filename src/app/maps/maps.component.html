@@ -1,1 +1,3 @@
-<p>maps works!</p>
+<div *ngFor="let map of maps | keyvalue">
+    <a [routerLink]="['/maps',map.key]"><img [src]='"./assets/images/maps/"+map.value.imageSrc' class="img-fluid" alt="map image"></a>
+</div>

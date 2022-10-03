@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ServerService {
 
-  url:string = 'http://localhost:3000/servers';
+  url:string = 'https://rpg-brawl-api.herokuapp.com/servers';
 
   constructor(private http:HttpClient) { }
   getall(){

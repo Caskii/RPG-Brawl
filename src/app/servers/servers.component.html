@@ -10,7 +10,8 @@
                     <div  class="playersList">
                         <h5>Players</h5>
                         <ng-container *ngFor="let player of server.players">
-                            <span>{{player.name}}</span>
+                            <maniaplanet-name [name]='player.name'></maniaplanet-name><br>
+                            {{player.name}}
                         </ng-container>
                     </div>
                     <h5>Maps on the server</h5>

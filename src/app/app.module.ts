@@ -12,6 +12,12 @@ import { ServersComponent } from './servers/servers.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServerService } from './services/server.service';
+import { MapService } from './services/map.service';
+import { MapDetailsComponent } from './map-details/map-details.component';
+import { ManiaplanetNameComponent } from './maniaplanet-name/maniaplanet-name.component';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './login/login.component';
+import { AdminBracketComponent } from './admin-bracket/admin-bracket.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,11 @@ import { ServerService } from './services/server.service';
     FinalBracketComponent,
     ServersComponent,
     MapsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MapDetailsComponent,
+    ManiaplanetNameComponent,
+    LoginComponent,
+    AdminBracketComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +39,7 @@ import { ServerService } from './services/server.service';
     NgbModule,
     HttpClientModule
   ],
-  providers: [ServerService],
+  providers: [ServerService,MapService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

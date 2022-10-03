@@ -1,0 +1,8 @@
+<ng-container *ngIf="map && map.name">
+    <img [src]='"./assets/images/maps/"+map.imageSrc' class="img-fluid" alt="map image">
+    <maniaplanet-name [name]='map.name'></maniaplanet-name>
+    <p>{{map.author}}</p>
+    <p>{{map.authorTime}}</p>
+    <p>{{map.nbCheckpoints}}</p>
+    <p><a [href]="map.maniaExLink">{{map.maniaExLink}}</a></p>
+</ng-container>
