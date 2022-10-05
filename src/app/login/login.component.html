@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form #f="ngForm" (ngSubmit)="login(f.value)">
+    <label for="fullName" class="form-label">Name : </label>
+    <input required ngModel name="fullName" #fullName="ngModel" id="fullName" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="fullName.touched && !fullName.valid">
+        <div *ngIf="fullName.errors?.['required']">Please enter a name</div>
+    </div>
+    <label for="password" class="form-label">Password : </label>
+    <input required ngModel name="password" #password="ngModel" id="password" type="password" class="form-control">
+    <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+        <div *ngIf="password.errors?.['required']">Please enter a password</div>
+    </div>
+    <button class="btn btn-primary" [disabled]='f.invalid'>Login</button>
+</form>

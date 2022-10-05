@@ -13,11 +13,13 @@ import { MapsComponent } from './maps/maps.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServerService } from './services/server.service';
 import { MapService } from './services/map.service';
+import { FormsModule } from '@angular/forms';
 import { MapDetailsComponent } from './map-details/map-details.component';
 import { ManiaplanetNameComponent } from './maniaplanet-name/maniaplanet-name.component';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { AdminBracketComponent } from './admin-bracket/admin-bracket.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,10 @@ import { AdminBracketComponent } from './admin-bracket/admin-bracket.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     HttpClientModule
   ],
-  providers: [ServerService,MapService,AuthService],
+  providers: [ServerService,MapService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
