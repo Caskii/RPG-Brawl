@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ManiaName } from '../models/mania-name';
 @Component({
   selector: 'maniaplanet-name[name]',
   templateUrl: './maniaplanet-name.component.html',

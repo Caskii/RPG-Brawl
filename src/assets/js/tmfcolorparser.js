@@ -260,7 +260,7 @@
       }
     }
   
-    toHTML(str, stripColors = false, stripLinks = false, stripTags = '') {
+    toHTML(str, stripColors = false, stripLinks = true, stripTags = '') {
       let col = false;
       let wide = false;
       let narrow = false;
@@ -357,9 +357,9 @@
           chunks[i] = this.getStyledString(chunk, matches[0], col, wide, narrow, caps, italic, stripColors);
         }
       });
-      chunks[0]=[chunks[0],""]
+      chunks[0]=[chunks[0]," "];
       chunks.forEach((chunk, i) => {
-        if(chunks[i][0]){
+        if(typeof chunks[i][0] === 'string' || chunks[i][0] instanceof String){
           chunks[i][0] = chunks[i][0].replace('\[DOLLAR\]+', '$', chunk);
           chunks[i][0] = chunks[i][0].replace('&NBSP;', '&nbsp;', chunk);
           chunks[i][0] = chunks[i][0].replaceAll(new RegExp("&nbsp;", "g"), ' ', chunk);

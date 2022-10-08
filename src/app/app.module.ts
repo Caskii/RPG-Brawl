@@ -13,13 +13,16 @@ import { MapsComponent } from './maps/maps.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServerService } from './services/server.service';
 import { MapService } from './services/map.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MapDetailsComponent } from './map-details/map-details.component';
 import { ManiaplanetNameComponent } from './maniaplanet-name/maniaplanet-name.component';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { AdminBracketComponent } from './admin-bracket/admin-bracket.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PlayerService } from './services/player.service';
+import { MapOverviewComponent } from './map-overview/map-overview.component';
+import { MillisecToMinSecMilliPipe } from './pipes/millisec-to-min-sec-milli.pipe';
 
 @NgModule({
   declarations: [
@@ -34,15 +37,18 @@ import { AuthGuard } from './guards/auth.guard';
     ManiaplanetNameComponent,
     LoginComponent,
     AdminBracketComponent,
+    MapOverviewComponent,
+    MillisecToMinSecMilliPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ServerService,MapService,AuthService,AuthGuard],
+  providers: [ServerService,MapService,PlayerService, AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

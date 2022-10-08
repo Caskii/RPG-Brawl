@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, observable } from 'rxjs';
+import { BracketService } from '../services/bracket.service';
 
 @Component({
   selector: 'app-final-bracket',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinalBracketComponent implements OnInit {
 
-  constructor() { }
+  bracket$:Observable<any> | undefined;
+
+  constructor(private bracketService:BracketService) { }
 
   ngOnInit(): void {
+    this.bracket$=this.bracketService.get();
   }
-
 }

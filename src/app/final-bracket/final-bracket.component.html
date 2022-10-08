@@ -1,334 +1,278 @@
-<div class="bracket-grid" style="grid-template-rows:repeat(82,var(--grid-row-height));grid-template-columns:2 minmax(12em, 12em) 3em minmax(12em, 12em)">
-	<div class="bracket-grid-header round1">
-		<div class="bracket-header-content">Winner eighths</div>
+<ng-container *ngIf="bracket$ |async as bracket">
+	<div class="bracket-grid" style="grid-template-rows:repeat(82,var(--grid-row-height));grid-template-columns:2 minmax(12em, 12em) 3em minmax(12em, 12em);">
+		<div class="bracket-grid-header round1">
+			<div class="bracket-header-content">Winner eighths</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_1']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_2']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_3']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_4']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_5']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_6']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_7']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_8']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-line round1" style="grid-row:span 7;"></div>
+		<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 10;"></div>
+		<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 10;"></div>
+		<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 10;"></div>
+		<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
+		<div class="bracket-line round1" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
+		<div class="bracket-grid-header round2">
+			<div class="bracket-header-content">Winner quarters</div>
+		</div>
+		<div class="bracket-spacer round2" style="grid-row:span 5;"></div>
+		<div class="bracket-spacer round2"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_1']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_2']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_3']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_4']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div class="bracket-line round2" style="grid-row:span 12;"></div>
+		<div class="bracket-line z-down round2" style="grid-row:span 9;"></div>
+		<div class="bracket-line round2" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round2" style="grid-row:span 9;"></div>
+		<div class="bracket-line round2" style="grid-row:span 20;"></div>
+		<div class="bracket-line z-down round2" style="grid-row:span 9;"></div>
+		<div class="bracket-line round2" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round2" style="grid-row:span 9;"></div>
+		<div class="bracket-grid-header round3">
+			<div class="bracket-header-content">Winner semis</div>
+		</div>
+		<div class="bracket-spacer round3" style="grid-row:span 15;"></div>
+		<div class="bracket-spacer round3"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_1']" class="bracket-team round3">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round3"  style="grid-row:span 32;"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_2']" class="bracket-team round3">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round3"  style="grid-row:span 12;"></div>
+		<div class="bracket-line round3" style="grid-row:span 22;"></div>
+		<div class="bracket-line z-down round3" style="grid-row:span 19;"></div>
+		<div class="bracket-line round3" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round3" style="grid-row:span 19;"></div>
+		<div class="bracket-grid-header round4">
+			<div class="bracket-header-content">Winner final</div>
+		</div>
+		<div class="bracket-spacer round4" style="grid-row:span 35;"></div>
+		<div class="bracket-spacer round4"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w4_1']" class="bracket-team round4">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-line horizontal round4" style="grid-row:span 42;"></div>
+		<div class="bracket-grid-header round5">
+			<div class="bracket-header-content">Grand final</div>
+		</div>
+		<div class="bracket-spacer round5" style="grid-row:span 35;"></div>
+		<div class="bracket-spacer round5"></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w5_1']" class="bracket-team round5">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
 	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">20</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t3</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t4</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t7</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t8</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t9</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t10</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t11</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t12</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t13</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t14</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t15</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t16</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t17</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t18</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t19</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t20</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t21</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t22</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t23</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t24</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t25</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t26</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t27</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t28</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t29</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t30</div>
-		<div class="bracket-team-points">23</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t31</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-team round1">
-		<div class="bracket-team-name">t32</div>
-		<div class="bracket-team-points">13</div>
-	</div>
-	<div class="bracket-spacer round1"></div>
-	<div class="bracket-line round1" style="grid-row:span 7;"></div>
-	<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 10;"></div>
-	<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 10;"></div>
-	<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 10;"></div>
-	<div class="bracket-line z-down round1" style="grid-row:span 4;"></div>
-	<div class="bracket-line round1" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round1" style="grid-row:span 4;"></div>
-	<div class="bracket-grid-header round2">
-		<div class="bracket-header-content">Winner quarters</div>
-	</div>
-	<div class="bracket-spacer round2" style="grid-row:span 5;"></div>
-	<div class="bracket-spacer round2"></div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round2">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round2"></div>
-	<div class="bracket-line round2" style="grid-row:span 12;"></div>
-	<div class="bracket-line z-down round2" style="grid-row:span 9;"></div>
-	<div class="bracket-line round2" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round2" style="grid-row:span 9;"></div>
-	<div class="bracket-line round2" style="grid-row:span 20;"></div>
-	<div class="bracket-line z-down round2" style="grid-row:span 9;"></div>
-	<div class="bracket-line round2" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round2" style="grid-row:span 9;"></div>
-	<div class="bracket-grid-header round3">
-		<div class="bracket-header-content">Winner semis</div>
-	</div>
-	<div class="bracket-spacer round3" style="grid-row:span 15;"></div>
-	<div class="bracket-spacer round3"></div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round3"  style="grid-row:span 32;"></div>
 
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
+	<!--
+		LOSER BRACKET 
+	-->
+
+	<div class="bracket-grid" style="grid-template-rows:repeat(41,var(--grid-row-height));grid-template-columns:2 minmax(12em, 12em) 3em minmax(12em, 12em);">
+		<div class="bracket-grid-header round1">
+			<div class="bracket-header-content">loser round 1</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_1']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_2']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_3']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-spacer round1"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_4']" class="bracket-team round1">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round1"></div>
+		<div class="bracket-line round1" style="grid-row:span 6;"></div>
+		<div class="bracket-line horizontal round1" style="grid-row:span 1;"></div>
+		<div class="bracket-line round1" style="grid-row:span 9;"></div>
+		<div class="bracket-line horizontal round1" style="grid-row:span 1;"></div>
+		<div class="bracket-line round1" style="grid-row:span 9;"></div>
+		<div class="bracket-line horizontal round1" style="grid-row:span 1;"></div>
+		<div class="bracket-line round1" style="grid-row:span 9;"></div>
+		<div class="bracket-line horizontal round1" style="grid-row:span 1;"></div>
+		<div class="bracket-grid-header round2">
+			<div class="bracket-header-content">loser round 2</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_1']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div class="bracket-spacer round2"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_2']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div class="bracket-spacer round2"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_3']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div class="bracket-spacer round2"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_4']" class="bracket-team round2">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round2"></div>
+		<div class="bracket-line round2" style="grid-row:span 7;"></div>
+		<div class="bracket-line z-down round2" style="grid-row:span 4;"></div>
+		<div class="bracket-line round2" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round2" style="grid-row:span 4;"></div>
+		<div class="bracket-line round2" style="grid-row:span 10;"></div>
+		<div class="bracket-line z-down round2" style="grid-row:span 4;"></div>
+		<div class="bracket-line round2" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round2" style="grid-row:span 4;"></div>
+		<div class="bracket-grid-header round3">
+			<div class="bracket-header-content">Loser eighths</div>
+		</div>
+		<div class="bracket-spacer round3" style="grid-row:span 5;"></div>
+		<div class="bracket-spacer round3"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_1']" class="bracket-team round3">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round3"  style="grid-row:span 12;"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_2']" class="bracket-team round3">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round3"></div>
+		<div class="bracket-line round3" style="grid-row:span 11;"></div>
+		<div class="bracket-line horizontal round3" style="grid-row:span 1;"></div>
+		<div class="bracket-line round3" style="grid-row:span 19;"></div>
+		<div class="bracket-line horizontal round3" style="grid-row:span 1;"></div>
+		<div class="bracket-grid-header round4">
+			<div class="bracket-header-content">Loser quarters</div>
+		</div>
+		<div class="bracket-spacer round4" style="grid-row:span 5;"></div>
+		<div class="bracket-spacer round4"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_1']" class="bracket-team round4">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round4"  style="grid-row:span 12;"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_2']" class="bracket-team round4">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round4"></div>
+		<div class="bracket-line round4" style="grid-row:span 12;"></div>
+		<div class="bracket-line z-down round4" style="grid-row:span 9;"></div>
+		<div class="bracket-line round4" style="grid-row:span 2;"></div>
+		<div class="bracket-line z-up round4" style="grid-row:span 9;"></div>
+		<div class="bracket-grid-header round5">
+			<div class="bracket-header-content">Loser semi</div>
+		</div>
+		<div class="bracket-spacer round5" style="grid-row:span 15;"></div>
+		<div class="bracket-spacer round5"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l5_1']" class="bracket-team round5">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round5"></div>
+		<div class="bracket-line round5" style="grid-row:span 21;"></div>
+		<div class="bracket-line horizontal round5" style="grid-row:span 1;"></div>
+		<div class="bracket-grid-header round6">
+			<div class="bracket-header-content">Loser final</div>
+		</div>
+		<div class="bracket-spacer round6" style="grid-row:span 16;"></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l6_1']" class="bracket-team round6">
+			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+			<div class="bracket-team-points">{{p.score}}</div>
+		</div>
+		<div class="bracket-spacer round6"></div>
 	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round3">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-spacer round3"  style="grid-row:span 12;"></div>
-	<div class="bracket-line round3" style="grid-row:span 22;"></div>
-	<div class="bracket-line z-down round3" style="grid-row:span 19;"></div>
-	<div class="bracket-line round3" style="grid-row:span 2;"></div>
-	<div class="bracket-line z-up round3" style="grid-row:span 19;"></div>
-	<div class="bracket-grid-header round4">
-		<div class="bracket-header-content">Winner final</div>
-	</div>
-	<div class="bracket-spacer round4" style="grid-row:span 35;"></div>
-	<div class="bracket-spacer round4"></div>
-	<div class="bracket-team round4">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round4">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round4">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round4">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-line round3" style="grid-row:span 22;"></div>
-	<div class="bracket-line horizontal round4" style="grid-row:span 42;"></div>
-	<div class="bracket-grid-header round5">
-		<div class="bracket-header-content">Grand final</div>
-	</div>
-	<div class="bracket-spacer round5" style="grid-row:span 35;"></div>
-	<div class="bracket-spacer round5"></div>
-	<div class="bracket-team round5">
-		<div class="bracket-team-name">t1</div>
-		<div class="bracket-team-points">11</div>
-	</div>
-	<div class="bracket-team round5">
-		<div class="bracket-team-name">t2</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round5">
-		<div class="bracket-team-name">t5</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-	<div class="bracket-team round5">
-		<div class="bracket-team-name">t6</div>
-		<div class="bracket-team-points">12</div>
-	</div>
-</div>
+</ng-container>

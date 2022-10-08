@@ -1,3 +1,5 @@
-<div *ngFor="let map of maps | keyvalue">
-    <a [routerLink]="['/maps',map.key]"><img [src]='"./assets/images/maps/"+map.value.imageSrc' class="img-fluid" alt="map image"></a>
+<div class="row justify-content-center">
+    <div *ngFor="let map of maps | keyvalue" class="col-lg-4">
+        <map-overview  [map]="map.value" [map-id]="map.key"></map-overview>
+    </div>
 </div>

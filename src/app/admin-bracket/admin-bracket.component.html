@@ -1,2 +1,14 @@
 <p>admin-bracket works!</p>
 <button (click)="update()">aaa</button>
+<button (click)="logout()">logout</button>
+<form [formGroup]="bracketForm" (ngSubmit)="onSubmit()">
+      <select formControlName="playerSelect" [value]="'wowit'">
+        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key" [selected]="player.key === '-'">
+            <maniaplanet-name [name]="player.value"></maniaplanet-name>
+        </option>
+      </select>
+      <button type="submit" class="btn btn-danger btn-lg btn-block">
+        Submit
+      </button>
+  </form>
+  

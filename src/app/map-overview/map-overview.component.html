@@ -1,0 +1,10 @@
+<a [routerLink]="['/maps',mapId]">
+    <div class="map-image" [style.background-image]='"url(/assets/images/maps/"+map.imageSrc+")"'>
+        <div class="filter"></div>
+        <div class="hide text-center ">
+            <maniaplanet-name [name]="map.name"></maniaplanet-name><br>
+            <u>Author</u><br> {{map.author}}<br>
+            <u>Author time</u><br>{{map.authorTime|millisecToMinSecMilli}}<br>
+        </div>
+    </div>
+</a>

@@ -13,7 +13,7 @@ export const MAPS: {[uid: string]: Map}={
         name: "[RPG] $069An$06Co$26Fyo, $F69Ko$F6Cno$F6Fyo",
         author:"bas_ekkelenkamp",
         authorTime:200078,
-        nbCheckpoints:0,
+        nbCheckpoints:27,
         maniaExLink:"https://tm.mania-exchange.com/tracks/view/228344/rpg-anoyo-konoyo",
         imageSrc:"Anoyo_Konoyo.jpg"
     },
@@ -29,7 +29,7 @@ export const MAPS: {[uid: string]: Map}={
         name: "$309Mi$409ne$509rv$609a-$933B",
         author:"adripeal",
         authorTime:193037,
-        nbCheckpoints:0,
+        nbCheckpoints:16,
         maniaExLink:"https://tm.mania-exchange.com/maps/228341/minerva-b",
         imageSrc:"Minerva-B.jpg"
     },
@@ -37,7 +37,7 @@ export const MAPS: {[uid: string]: Map}={
         name: "$i$s$FEC L$FC3a$FECy$F96a$FECl$F93i $FC3 A$FECls$F96a$FECm$F93a",
         author:"vince0178",
         authorTime:253632,
-        nbCheckpoints:0,
+        nbCheckpoints:27,
         maniaExLink:"https://tm.mania-exchange.com/tracks/view/228416",
         imageSrc:"Layali_Alsama.jpg"
     },

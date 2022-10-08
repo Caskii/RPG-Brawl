@@ -1,0 +1,35 @@
+.map-image{
+    margin: 10px;
+    border-radius: 40px 0px; 
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    width: 100%;
+    color: white;
+    
+}
+.hide {
+    background-color: rgba(20,20,20,.85);
+    transition: all 0.5s ease;
+    width: 0%;
+    height: 100%;
+    visibility: hidden;
+    float: right;
+  }
+  
+  .map-image:hover > .hide {
+    padding-top: 5px;
+    width: 40%;
+    visibility: visible;
+  }
+  .filter{
+    background-color: rgba(255,255,255,0);;
+    width: 100%;
+    height: 100%;
+    float:left;
+    transition: all 0.5s ease;
+  }
+  .map-image:hover > .filter {
+    background-color: rgba(255,255,255,.5);
+    width: 60%;
+  }

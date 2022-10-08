@@ -7,18 +7,18 @@ import { AuthService } from './auth.service';
 })
 export class BracketService {
   
-  /*url:string = 'https://rpg-brawl-api.herokuapp.com/brackets/update/brawl-2022';*/
-  url:string = 'http://localhost:3000/brackets/update/brawl-2022';
+  getUrl:string = 'https://rpg-brawl-api.herokuapp.com/brackets/brawl-2022';
+  updateUrl:string = 'https://rpg-brawl-api.herokuapp.com/brackets/update/brawl-2022';
 
   constructor(private http:HttpClient,private authService:AuthService) { }
 
-  getall(){
-    return  this.http.get(this.url);
+  get(){
+    return this.http.get(this.getUrl);
   }
   update(bracket:string){
       let token =  this.authService.getToken();
       var headers_object = new HttpHeaders().set("Authorization", "JWT " + token);
-      return this.http.put(this.url,{ "bracket" : bracket },  { headers: headers_object });
+      return this.http.put(this.updateUrl,{ "bracket" : bracket },  { headers: headers_object });
   }
 
 }

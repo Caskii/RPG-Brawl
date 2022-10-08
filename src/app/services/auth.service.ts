@@ -16,6 +16,9 @@ export class AuthService {
     return this.http.post<any>(this.signInUrl, { "fullName" : username, "password" : password })
     .pipe(map(response =>this.saveToken(response.token)));
   }
+  logout(){
+    localStorage.removeItem('token');
+  }
 
   isLoggedIn(){
     let jwtHelper = new JwtHelperService();
