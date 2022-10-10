@@ -23,6 +23,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { PlayerService } from './services/player.service';
 import { MapOverviewComponent } from './map-overview/map-overview.component';
 import { MillisecToMinSecMilliPipe } from './pipes/millisec-to-min-sec-milli.pipe';
+import { LeaderboardService } from './services/leaderboard.service';
+import { BracketPageComponent } from './bracket-page/bracket-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { MillisecToMinSecMilliPipe } from './pipes/millisec-to-min-sec-milli.pip
     LoginComponent,
     AdminBracketComponent,
     MapOverviewComponent,
-    MillisecToMinSecMilliPipe
+    MillisecToMinSecMilliPipe,
+    BracketPageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,7 @@ import { MillisecToMinSecMilliPipe } from './pipes/millisec-to-min-sec-milli.pip
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ServerService,MapService,PlayerService, AuthService,AuthGuard],
+  providers: [ServerService,MapService,PlayerService,LeaderboardService, AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

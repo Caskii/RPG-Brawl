@@ -1,19 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, observable } from 'rxjs';
-import { BracketService } from '../services/bracket.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PlayerService } from '../services/player.service';
 
 @Component({
-  selector: 'app-final-bracket',
+  selector: 'final-bracket',
   templateUrl: './final-bracket.component.html',
   styleUrls: ['./final-bracket.component.css']
 })
 export class FinalBracketComponent implements OnInit {
+  @Input('bracket$') bracket$!:Observable<any> | undefined;;
+  @Output() matchClicked =  new EventEmitter();
 
-  bracket$:Observable<any> | undefined;
+  players:{[login: string]: string};
 
-  constructor(private bracketService:BracketService) { }
+  constructor(playerService:PlayerService) { 
+    this.players=playerService.getall();
+  }
 
   ngOnInit(): void {
-    this.bracket$=this.bracketService.get();
   }
+  onMatchClick(matchName:string){
+    this.matchClicked.emit(matchName)
+  }
+
 }

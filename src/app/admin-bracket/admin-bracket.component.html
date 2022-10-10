@@ -1,14 +1,38 @@
-<p>admin-bracket works!</p>
-<button (click)="update()">aaa</button>
-<button (click)="logout()">logout</button>
-<form [formGroup]="bracketForm" (ngSubmit)="onSubmit()">
-      <select formControlName="playerSelect" [value]="'wowit'">
-        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key" [selected]="player.key === '-'">
+<ng-container *ngIf="bracket$ |async as bracket">
+<button (click)="logout()" class="btn btn-danger">logout</button>
+<final-bracket [bracket$]="bracket$" (matchClicked)="onMatchClicked($event)"></final-bracket>
+  <h3>Edit match : </h3>
+  Every match need to be updated separately<br>
+  <b>Currently editing : {{currentMatch}}</b><i>( Winner|Loser Round_Match)</i>
+  <form #f="ngForm" (ngSubmit)="save()">
+      <select name="playerName1" required [(ngModel)]="playersLogin[0]">
+        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key">
+          {{player.key}} - 
             <maniaplanet-name [name]="player.value"></maniaplanet-name>
         </option>
       </select>
-      <button type="submit" class="btn btn-danger btn-lg btn-block">
-        Submit
-      </button>
-  </form>
-  
+      <input required [min]="0" [max]="140" [(ngModel)]="playersPoints[0]" name="point1" type="number"><br>
+      <select name="playerName2" required [(ngModel)]="playersLogin[1]">
+        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key" [selected]="player.key==playersLogin[1]?true:false">
+          {{player.key}} - 
+            <maniaplanet-name [name]="player.value"></maniaplanet-name>
+        </option>
+      </select>
+      <input required [min]="0" [max]="140" [(ngModel)]="playersPoints[1]" name="point2" type="number"><br>
+      <select name="playerName3" required [(ngModel)]="playersLogin[2]">
+        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key" [selected]="player.key==playersLogin[2]?true:false">
+          {{player.key}} - 
+            <maniaplanet-name [name]="player.value"></maniaplanet-name>
+        </option>
+      </select>
+      <input required [min]="0" [max]="140" [(ngModel)]="playersPoints[2]" name="point3" type="number"><br>
+      <select name="playerName4" required [(ngModel)]="playersLogin[3]">
+        <option *ngFor="let player of players|keyvalue" [ngValue]="player.key" [selected]="player.key==playersLogin[3]?true:false">
+          {{player.key}} - 
+            <maniaplanet-name [name]="player.value"></maniaplanet-name>
+        </option>
+      </select>
+      <input required [min]="0" [max]="140" [(ngModel)]="playersPoints[3]" name="point4" type="number"><br>
+      <button class="btn btn-primary" [disabled]='f.invalid'>Update</button>
+    </form>
+</ng-container>

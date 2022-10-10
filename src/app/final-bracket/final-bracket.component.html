@@ -4,50 +4,50 @@
 			<div class="bracket-header-content">Winner eighths</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_1']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_1']" class="bracket-team round1" (click)="onMatchClick('w1_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_2']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_2']" class="bracket-team round1" (click)="onMatchClick('w1_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_3']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_3']" class="bracket-team round1" (click)="onMatchClick('w1_3')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_4']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_4']" class="bracket-team round1" (click)="onMatchClick('w1_4')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_5']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_5']" class="bracket-team round1" (click)="onMatchClick('w1_5')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_6']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_6']" class="bracket-team round1" (click)="onMatchClick('w1_6')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_7']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_7']" class="bracket-team round1" (click)="onMatchClick('w1_7')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_8']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w1_8']" class="bracket-team round1" (click)="onMatchClick('w1_8')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
@@ -72,23 +72,23 @@
 		</div>
 		<div class="bracket-spacer round2" style="grid-row:span 5;"></div>
 		<div class="bracket-spacer round2"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_1']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_1']" class="bracket-team round2" (click)="onMatchClick('w2_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_2']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_2']" class="bracket-team round2" (click)="onMatchClick('w2_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_3']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_3']" class="bracket-team round2" (click)="onMatchClick('w2_3')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"  style="grid-row:span 12;"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_4']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w2_4']" class="bracket-team round2" (click)="onMatchClick('w2_4')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
@@ -105,13 +105,13 @@
 		</div>
 		<div class="bracket-spacer round3" style="grid-row:span 15;"></div>
 		<div class="bracket-spacer round3"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_1']" class="bracket-team round3">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_1']" class="bracket-team round3" (click)="onMatchClick('w3_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round3"  style="grid-row:span 32;"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_2']" class="bracket-team round3">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w3_2']" class="bracket-team round3" (click)="onMatchClick('w3_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round3"  style="grid-row:span 12;"></div>
@@ -124,8 +124,8 @@
 		</div>
 		<div class="bracket-spacer round4" style="grid-row:span 35;"></div>
 		<div class="bracket-spacer round4"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w4_1']" class="bracket-team round4">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w4_1']" class="bracket-team round4" (click)="onMatchClick('w4_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-line horizontal round4" style="grid-row:span 42;"></div>
@@ -134,8 +134,8 @@
 		</div>
 		<div class="bracket-spacer round5" style="grid-row:span 35;"></div>
 		<div class="bracket-spacer round5"></div>
-		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w5_1']" class="bracket-team round5">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['upper_bracket']['matches']['w5_1']" class="bracket-team round5" (click)="onMatchClick('w5_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 	</div>
@@ -149,26 +149,26 @@
 			<div class="bracket-header-content">loser round 1</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_1']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_1']" class="bracket-team round1" (click)="onMatchClick('l1_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_2']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_2']" class="bracket-team round1" (click)="onMatchClick('l1_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_3']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_3']" class="bracket-team round1" (click)="onMatchClick('l1_3')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
 		<div class="bracket-spacer round1"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_4']" class="bracket-team round1">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l1_4']" class="bracket-team round1" (click)="onMatchClick('l1_4')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round1"></div>
@@ -184,26 +184,26 @@
 			<div class="bracket-header-content">loser round 2</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_1']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_1']" class="bracket-team round2" (click)="onMatchClick('l2_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
 		<div class="bracket-spacer round2"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_2']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_2']" class="bracket-team round2" (click)="onMatchClick('l2_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
 		<div class="bracket-spacer round2"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_3']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_3']" class="bracket-team round2" (click)="onMatchClick('l2_3')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
 		<div class="bracket-spacer round2"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_4']" class="bracket-team round2">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l2_4']" class="bracket-team round2" (click)="onMatchClick('l2_4')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round2"></div>
@@ -220,13 +220,13 @@
 		</div>
 		<div class="bracket-spacer round3" style="grid-row:span 5;"></div>
 		<div class="bracket-spacer round3"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_1']" class="bracket-team round3">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_1']" class="bracket-team round3" (click)="onMatchClick('l3_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round3"  style="grid-row:span 12;"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_2']" class="bracket-team round3">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l3_2']" class="bracket-team round3" (click)="onMatchClick('l3_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round3"></div>
@@ -239,13 +239,13 @@
 		</div>
 		<div class="bracket-spacer round4" style="grid-row:span 5;"></div>
 		<div class="bracket-spacer round4"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_1']" class="bracket-team round4">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_1']" class="bracket-team round4" (click)="onMatchClick('l4_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round4"  style="grid-row:span 12;"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_2']" class="bracket-team round4">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l4_2']" class="bracket-team round4" (click)="onMatchClick('l4_2')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round4"></div>
@@ -258,8 +258,8 @@
 		</div>
 		<div class="bracket-spacer round5" style="grid-row:span 15;"></div>
 		<div class="bracket-spacer round5"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l5_1']" class="bracket-team round5">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l5_1']" class="bracket-team round5" (click)="onMatchClick('l5_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round5"></div>
@@ -269,8 +269,8 @@
 			<div class="bracket-header-content">Loser final</div>
 		</div>
 		<div class="bracket-spacer round6" style="grid-row:span 16;"></div>
-		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l6_1']" class="bracket-team round6">
-			<div class="bracket-team-name"><maniaplanet-name [name]="p.name"></maniaplanet-name></div>
+		<div *ngFor="let p of bracket['bracket']['lower_bracket']['matches']['l6_1']" class="bracket-team round6" (click)="onMatchClick('l6_1')">
+			<div class="bracket-team-name"><maniaplanet-name [name]="players[p.name]"></maniaplanet-name></div>
 			<div class="bracket-team-points">{{p.score}}</div>
 		</div>
 		<div class="bracket-spacer round6"></div>
