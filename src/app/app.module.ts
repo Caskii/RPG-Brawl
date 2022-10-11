@@ -25,6 +25,8 @@ import { MapOverviewComponent } from './map-overview/map-overview.component';
 import { MillisecToMinSecMilliPipe } from './pipes/millisec-to-min-sec-milli.pipe';
 import { LeaderboardService } from './services/leaderboard.service';
 import { BracketPageComponent } from './bracket-page/bracket-page.component';
+import { MapInCardComponent } from './map-in-card/map-in-card.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { BracketPageComponent } from './bracket-page/bracket-page.component';
     AdminBracketComponent,
     MapOverviewComponent,
     MillisecToMinSecMilliPipe,
-    BracketPageComponent
+    BracketPageComponent,
+    MapInCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

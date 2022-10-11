@@ -3,11 +3,10 @@
 	--grid-row-height: 12px;
     --bracket-line-color: red;
     --interface-border:grey;
-	--interface-background:SandyBrown;
-	--body-text-color:grey;
+	--interface-background:#d9a304;
+	--body-text-color:black;
 	--bracket-team-name-bg:rgba(29, 31, 32,.9);
 }
-
 .bracket-grid {
 	display: grid;
 	grid-auto-flow: column;
@@ -17,6 +16,7 @@
 	max-width:100%;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	color: var(--body-text-color);
 }
 
 .bracket-line,

@@ -1,13 +1,18 @@
-<form #f="ngForm" (ngSubmit)="login(f.value)">
-    <label for="fullName" class="form-label">Name : </label>
-    <input required ngModel name="fullName" #fullName="ngModel" id="fullName" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="fullName.touched && !fullName.valid">
-        <div *ngIf="fullName.errors?.['required']">Please enter a name</div>
-    </div>
-    <label for="password" class="form-label">Password : </label>
-    <input required ngModel name="password" #password="ngModel" id="password" type="password" class="form-control">
-    <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
-        <div *ngIf="password.errors?.['required']">Please enter a password</div>
-    </div>
-    <button class="btn btn-primary" [disabled]='f.invalid'>Login</button>
-</form>
+<div class="row justify-content-md-center">
+    <form #f="ngForm" (ngSubmit)="login(f.value)" class="col-md-4 text-center">
+        <label for="fullName" class="form-label">Name</label>
+        <input required ngModel name="fullName" #fullName="ngModel" id="fullName" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="fullName.touched && !fullName.valid">
+            <div *ngIf="fullName.errors?.['required']">Please enter a name</div>
+        </div>
+        <label for="password" class="form-label">Password</label>
+        <input required ngModel name="password" #password="ngModel" id="password" type="password" class="form-control">
+        <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+            <div *ngIf="password.errors?.['required']">Please enter a password</div>
+        </div><br>
+        <div *ngIf="error" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+        <button class="btn btn-primary" [disabled]='f.invalid'>Login</button>
+    </form>
+</div>

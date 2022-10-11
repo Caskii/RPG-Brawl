@@ -2,21 +2,18 @@
     <div class="row">
         <div *ngFor="let server of servers$ |async as servers" class="col-sm d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="" alt="Map image">
                 <div class="card-body">
-                    <h3 class="card-title">{{server._id}}</h3>
-                    <p class="card-text">Current map : {{server.currentMap}}</p>
-                    <p class="card-text">Coming next : {{server.nextMap}}</p>
+                    <h3 class="card-title"><maniaplanet-name [name]="server.serverName"></maniaplanet-name></h3>
                     <div  class="playersList">
                         <h5>Players</h5>
                         <ng-container *ngFor="let player of server.players">
                             <maniaplanet-name [name]='player.name'></maniaplanet-name><br>
                         </ng-container>
-                    </div>
-                    <h5>Maps on the server</h5>
-                    <ng-container *ngFor="let map of server.map">
-                        {{map}}
-                    </ng-container>
+                    </div><br>
+                    <h5>Current map</h5>
+                    <p class="card-text"><app-map-in-card [mapId]="server.currentMap"></app-map-in-card> </p>
+                    <h5>Coming next</h5>
+                    <p class="card-text"><app-map-in-card [mapId]="server.nextMap"></app-map-in-card></p>
                 </div>
             </div>
         </div>
