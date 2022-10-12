@@ -14,7 +14,7 @@ export const PLAYERS: {[login: string]: string}={
     'Futa':'nShore.Futa',
     'vince0178':'Kids.Titanwara',
     'chaoshand':'¬мѡ» Chaoshand',
-    'nikspeed':'¬мѡ» Hazard',
+    'xiluux':'Kids.Xilux',
     'blasterz693':'Blasterz693',
     'siidzer':'nShore.SiiDZeR',
     'nemesis76lh':'pr!mus.Sushi',
@@ -30,7 +30,7 @@ export const PLAYERS: {[login: string]: string}={
     'slo_rambo':'R@mboTriceps',
     'jantm-':'Gravity.JanTM',
     'mokuura':'Mokuura',
-    'bas_ekkelenkamp':'¬мѡ» basbaas',
+    'elskinny':'Skinny',
     'yotai':'Not2Waffy',
     'k_6s':'k_6s'
 }

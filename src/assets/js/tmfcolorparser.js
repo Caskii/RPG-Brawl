@@ -283,7 +283,11 @@
       string = this.replace(' ', '&nbsp;', string);
       string = this.parseLinks(string, !stripLinks);
   
-      const chunks = string.split('$');
+      let chunks = string.split('$');
+      if (chunks.length==1){
+        chunks = this.workChunksArray(chunks);
+        return chunks.filter(chunk => chunk.length || chunk);
+      }
       chunks.forEach((chunk, i) => {
         let colSave;
         let wideSave;
@@ -357,6 +361,14 @@
           chunks[i] = this.getStyledString(chunk, matches[0], col, wide, narrow, caps, italic, stripColors);
         }
       });
+      
+      //string = chunks.filter(chunk => chunk.length || chunk).join('');
+      chunks = this.workChunksArray(chunks);
+      //not displaying link
+      //string = this.insertLinks(string);
+      return chunks.filter(chunk => chunk.length || chunk);
+    }
+    workChunksArray(chunks){
       chunks[0]=[chunks[0]," "];
       chunks.forEach((chunk, i) => {
         if(typeof chunks[i][0] === 'string' || chunks[i][0] instanceof String){
@@ -365,11 +377,7 @@
           chunks[i][0] = chunks[i][0].replaceAll(new RegExp("&nbsp;", "g"), ' ', chunk);
         }
       });
-      //string = chunks.filter(chunk => chunk.length || chunk).join('');
-      
-      //not displaying link
-      //string = this.insertLinks(string);
-      return chunks.filter(chunk => chunk.length || chunk);
+      return chunks;
     }
   
     toArray(str) {

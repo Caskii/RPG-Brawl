@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServersComponent } from './servers/servers.component';
-import { StandingComponent } from './standing/standing.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent},

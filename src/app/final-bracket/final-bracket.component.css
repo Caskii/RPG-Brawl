@@ -74,6 +74,7 @@
 }
 .bracket-team-points {
 	background: var(--interface-background);
+	min-width: 30px;
 	width: 30px;
 	max-width: 30px;
 	text-align: center;
@@ -98,7 +99,7 @@
 }
 
 .bracket-line, .bracket-spacer {
-	--bracket-line-color: grey;
+	--bracket-line-color: #181a1c;
 }
 
 .bracket-line.loser-advance {
