@@ -1,5 +1,5 @@
 <ng-container *ngIf="maps[MapId] as selectedMap;else unknown">
-    <img [src]="'./assets/images/maps/'+selectedMap.imageSrc">
+    <img [src]="'./assets/images/maps/thumbnails/'+selectedMap.imageSrc">
 </ng-container>
 <ng-template #unknown>
     Unknown map
